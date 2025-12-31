@@ -1,14 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { X, ArrowRight } from 'lucide-react';
+import { MousePointer2 } from 'lucide-react';
 
 export default function GalleryGrid(props) {
   const filterButtons = [
     { id: 'all', label: 'All', color: '#B2C6C9' },
-    { id: 'js', label: 'JS/TS', color: '#C1121F' },
-    { id: 'c', label: 'C/C++', color: '#DF817A' },
-    { id: 'python', label: 'Python', color: '#EEB9A8' },
-    { id: 'java', label: 'Java', color: '#EEB9A8' },
-    { id: 'other', label: 'Other', color: '#EEB9A8' },
+    { id: 'js', label: 'JS/TS', color: '#efb100' },
+    { id: 'c', label: 'C/C++', color: '#1447e6' },
+    { id: 'python', label: 'Python', color: '#497d00' },
+    { id: 'java', label: 'Java', color: '#ff8904' },
+    { id: 'other', label: 'Other', color: '#fb2c36' },
   ];
 
   const [activeFilter, setActiveFilter] = useState('all');
@@ -36,11 +36,11 @@ export default function GalleryGrid(props) {
         if (activeFilter === 'js') {
           return lang.includes('javascript') || lang.includes('typescript');
         } else if (activeFilter === 'c') {
-          return lang.includes('c') && !lang.includes('javascript');
+          return lang.includes('c') && !lang.includes('javascript') && !lang.includes('typescript');
         } else if (activeFilter === 'python') {
           return lang.includes('python');
         } else if (activeFilter === 'java') {
-          return lang.includes('java') && !lang.includes('javascript') && !lang.includes('typescript');
+          return lang.includes('java') && !lang.includes('javascript');
         } else if (activeFilter === 'other') {
           return !lang.includes('javascript') && !lang.includes('typescript') && 
                  !lang.includes('python') && !lang.includes('java') && !lang.includes('c');
@@ -50,7 +50,7 @@ export default function GalleryGrid(props) {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 mb-8">
         <div className="flex justify-center mb-12 mt-16">
           <div className="relative inline-flex bg-white/60 backdrop-blur-md rounded-full p-1.5 shadow-lg border border-white/60">
             <div
@@ -72,7 +72,7 @@ export default function GalleryGrid(props) {
                   key={filter.id}
                   ref={(el) => (buttonRefs.current[filter.id] = el)}
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`relative px-2 sm:px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap ${
+                  className={`relative px-2 sm:px-6 py-2.5 cursor-pointer rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap ${
                     isActive 
                       ? 'text-white' 
                       : 'text-gray-700 hover:text-gray-900'
@@ -90,10 +90,7 @@ export default function GalleryGrid(props) {
             return (
               <div
                 key={project.title}
-                className="group cursor-pointer bg-white rounded-xl border-2 border-gray-300 shadow-md hover:shadow-xl hover:border-gray-400 transition-all duration-300 overflow-hidden"
-                onMouseEnter={() => setHoveredId(project.title)}
-                onMouseLeave={() => setHoveredId(null)}
-                onClick={() => props.setSelectedProject(project)}
+                className="group bg-white rounded-xl border-2 border-gray-300 shadow-md hover:shadow-xl hover:border-gray-400 transition-all duration-300 overflow-hidden"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-gray-50 border-b-2 border-gray-300">
                   <img
@@ -115,16 +112,14 @@ export default function GalleryGrid(props) {
                   <p className="text-sm text-gray-700 mb-3 line-clamp-2 leading-relaxed">
                     {project.description}
                   </p>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      props.setSelectedProject(project);
-                    }}
-                    className="px-4 py-2 rounded-lg text-gray-900 text-sm border-2 border-gray-900 bg-white font-semibold hover:bg-gray-900 hover:text-white transition-all flex items-center gap-2"
+                  {project.link !== "" && <a 
+                    className="inline-flex items-center gap-2 px-3 py-2 font-serif rounded-full text-white hover:shadow-xl hover:scale-105 transition-all shadow-lg mt-[30px] hover:bg-[#e85d04] bg-[#fb8500]"
+                    target="_blank"
+                    href={project.link}
                   >
-                    View More
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                      View on Github
+                      <MousePointer2 className="w-4 h-4" />
+                  </a>}
                 </div>
               </div>
             );

@@ -1,12 +1,12 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
-import MainPage from './components/MainPage'
 import Header from './components/Header'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import ExperiencePage from './components/ExperiencePage'
 import ProjectsPage from './components/ProjectsPage'
 import AboutPage from './components/AboutPage'
+import Footer from './components/Footer'
 
 function App() {
   const [currPage, setCurrPage] = useState("main");
@@ -21,9 +21,9 @@ function App() {
 
   return (
     <>
-      <div className='w-screen h-screen flex flex-col justify-between'>
+      <div className='w-full min-h-screen flex flex-col'>
         <Header setCurrPage={setCurrPage} currPage={currPage}/>
-        <div className='flex-1 min-h-0'>
+        <div className='flex-1'>
           <Routes>
             <Route 
               path="/" 
@@ -36,22 +36,7 @@ function App() {
                   transition={{ duration: 0.2, ease: "easeOut" }}
                   className="h-full"
                 >
-                  <MainPage/>
-                </motion.div>
-              }
-            />
-            <Route 
-              path="/aboutme" 
-              element={
-                <motion.div
-                  key="about"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.2, ease: "easeOut" }}
-                  className="h-full"
-                >
-                  <AboutPage/>
+                  <AboutPage setCurrPage={setCurrPage}/>
                 </motion.div>
               }
             />
@@ -87,6 +72,7 @@ function App() {
             />
           </Routes>
         </div>
+        <Footer />
       </div>
     </>
   )
