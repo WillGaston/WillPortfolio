@@ -80,7 +80,7 @@ export default function AboutPage(props) {
           </div>
           <p className='font-light'>⚲ Sydney, Australia</p>
           <p className="text-lg text-black leading-relaxed max-w-2xl font-light">
-            Penultimate <span className="text-orange-500 font-semibold">Compute Science</span> student at <span className="text-orange-500 font-semibold">UNSW</span>. 
+            Penultimate <span className="text-orange-500 font-semibold">Computer Science</span> student at <span className="text-orange-500 font-semibold">UNSW</span>. 
           </p>
           <p className='font-light'>Interested in systems programming, fullstack development, and databases.</p>
         </header>
