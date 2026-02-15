@@ -32,7 +32,7 @@ export default function ExperienceCard({ image, title, company, duration, descri
           <h3 className="text-xl md:text-xl font-black text-slate-900 tracking-tight mb-4 group-hover:text-[#fb8500] transition-colors">
             {title}
           </h3>
-          <p className="text-slate-500 text-base md:text-lg leading-relaxed font-light max-w-2xl">
+          <p className="text-slate-500 text-base md:text-lg leading-relaxed font-light max-w-2xl whitespace-pre-line">
             {description}
           </p>
         </div>

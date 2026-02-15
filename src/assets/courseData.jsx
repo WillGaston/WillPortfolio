@@ -18,11 +18,11 @@ export const courses = {
     {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JS", "React"], grade: "89", rating: "8", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/comp6080?year=2025"},
   ],
   completing: [
-  ],
-  planned: [
     {courseCode: "COMP3131", courseTitle: "Programming Languages and Compilers", term: "26T1", tags: ["Theory"], grade: "", rating: "", link: ""},
     {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26T1", tags: [], grade: "", rating: "", link: ""},
     {courseCode: "COMP9315", courseTitle: "Database Systems Implementation", term: "26T1", tags: ["Systems", "Databases"], grade: "", rating: "", link: ""},
+  ],
+  planned: [
     {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26T2", tags: [], grade: "", rating: "", link: ""},
     {courseCode: "COMP6771", courseTitle: "Advanced C++ Programming", term: "26T2", tags: [], grade: "", rating: "", link: ""},
     {courseCode: "COMP9319", courseTitle: "Web Data Compression and Search", term: "26T2", tags: [], grade: "", rating: "", link: ""},
