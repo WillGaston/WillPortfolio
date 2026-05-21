@@ -16,17 +16,16 @@ export const courses = {
     {courseCode: "COMP6841", courseTitle: "Extended Security Engineering and Cyber Security", term: "25T2", tags: ["Theory", "CTF"], grade: "84", rating: "7", link: "https://www.handbook.unsw.edu.au/postgraduate/courses/2025/COMP6841"},
     {courseCode: "COMP3121", courseTitle: "Algorithm Design and Analysis", term: "25T3", tags: ["DSA", "Proofs"], grade: "86", rating: "8.5", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/comp3121?year=2025"},
     {courseCode: "COMP6080", courseTitle: "Web Front-End Programming", term: "25T3", tags: ["JS", "React"], grade: "89", rating: "8", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2025/comp6080?year=2025"},
+    {courseCode: "COMP3131", courseTitle: "Programming Languages and Compilers", term: "26T1", tags: ["Theory"], grade: "82", rating: "6", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2026/COMP3131?year=2026"},
+    {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26T1", tags: [], grade: "CM", rating: "9", link: "https://www.handbook.unsw.edu.au/undergraduate/courses/2026/COMP4920?year=2026"},
+    {courseCode: "COMP9315", courseTitle: "Database Systems Implementation", term: "26T1", tags: ["Systems", "Databases"], grade: "86", rating: "9.5", link: "https://www.handbook.unsw.edu.au/postgraduate/courses/2026/comp9315?year=2026"},
   ],
   completing: [
-    {courseCode: "COMP3131", courseTitle: "Programming Languages and Compilers", term: "26T1", tags: ["Theory"], grade: "", rating: "", link: ""},
-    {courseCode: "COMP4920", courseTitle: "Professional Issues and Ethics in Information Technology", term: "26T1", tags: [], grade: "", rating: "", link: ""},
-    {courseCode: "COMP9315", courseTitle: "Database Systems Implementation", term: "26T1", tags: ["Systems", "Databases"], grade: "", rating: "", link: ""},
+    {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26T2", tags: [], grade: "", rating: "", link: ""},
+    {courseCode: "COMP9313", courseTitle: "Big Data Management", term: "26T2", tags: [], grade: "", rating: "", link: ""},
+    {courseCode: "SCIF1004", courseTitle: "Science and the Cinema", term: "26T2", tags: [], grade: "", rating: "", link: ""}
   ],
   planned: [
-    {courseCode: "COMP3900", courseTitle: "Computer Science Project", term: "26T2", tags: [], grade: "", rating: "", link: ""},
-    {courseCode: "COMP6771", courseTitle: "Advanced C++ Programming", term: "26T2", tags: [], grade: "", rating: "", link: ""},
-    {courseCode: "COMP9319", courseTitle: "Web Data Compression and Search", term: "26T2", tags: [], grade: "", rating: "", link: ""},
-    {courseCode: "ARTS2363", courseTitle: "Chinese Philosophy", term: "26T3", tags: ["Confucianism", "Toaism"], grade: "", rating: "", link: ""},
     {courseCode: "COMP6714", courseTitle: "Information Retrieval and Web Search", term: "26T3", tags: ["Theory"], grade: "", rating: "", link: ""},
     {courseCode: "COMP9242", courseTitle: "Advanced Operating Systems", term: "26T3", tags: ["Linux", "C", "Systems"], grade: "", rating: "", link: ""}
   ]
