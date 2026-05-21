@@ -89,12 +89,11 @@ export default function AboutPage(props) {
               Final year <span className="text-slate-900 font-semibold decoration-4 underline-offset-2">Computer Science</span> student at <span className="text-slate-900 font-semibold">UNSW</span>. 
             </p>
             <p className="text-base text-slate-500">
-              Deeply interested in systems programming, full-stack architectures, and core database internals.
+              Interested in systems and full-stack programming, and databases.
             </p>
           </div>
         </header>
 
-        {/* Quick Navigation Buttons */}
         <div className="grid grid-cols-2 gap-4 mb-20 max-w-md">
           <button 
             className="flex items-center justify-between px-5 py-3.5 text-sm font-semibold rounded-xl text-white shadow-md shadow-orange-600/10 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
@@ -112,7 +111,6 @@ export default function AboutPage(props) {
           </button>
         </div>
 
-        {/* Tech Stack Languages Section */}
         <section className="mb-16">
           <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Core Stack</h2>
           <div className="flex flex-wrap gap-3">
@@ -125,7 +123,6 @@ export default function AboutPage(props) {
           </div>
         </section>
 
-        {/* Extracurriculars Timeline Grid */}
         <section className="mb-20">
           <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Competitive & Extracurricular</h2>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -144,7 +141,6 @@ export default function AboutPage(props) {
           </div>
         </section>
 
-        {/* Academics Container */}
         <section>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-slate-200 pb-5">
             <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Academics Portfolio</h2>
@@ -163,7 +159,6 @@ export default function AboutPage(props) {
             </div>
           </div>
 
-          {/* Search + Sort Sub-Bar */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <div className="relative flex-grow">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -198,7 +193,6 @@ export default function AboutPage(props) {
             </div>
           </div>
 
-          {/* Cards List Wrapper */}
           <div className="space-y-3">
             <AnimatePresence mode="wait">
               <motion.div
@@ -214,7 +208,7 @@ export default function AboutPage(props) {
                     key={index} 
                     course={course} 
                     type={activeTab} 
-                    onSelect={() => setSelectedCourse(course)} // Triggers popup state updates
+                    onSelect={() => setSelectedCourse(course)}
                   />
                 ))}
               </motion.div>

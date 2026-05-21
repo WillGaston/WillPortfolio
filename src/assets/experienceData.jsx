@@ -15,7 +15,7 @@ export const experiences = [
   {
     title: 'Casual Academic',
     company: 'UNSW CSE',
-    duration: 'September 2025 - Present',
+    duration: 'September 2025 - May 2026',
     description: '\n Lab Assistant for COMP2511 - Software Design and Architecture - 25T3, 26T1\n\n- Help students learn OOP and software architecture concepts through in-person lab sessions\n- Mark weekly coding and theory work and assignments related to course content',
     tags: ['Java', 'OOP', 'Design Patterns'],
     image: unswcse,

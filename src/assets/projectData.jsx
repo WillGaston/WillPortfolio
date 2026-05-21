@@ -15,6 +15,10 @@ import breakoutImage from './images/breakout.jpg'
 import salesAggregatorImage from './images/salesaggregator.png'
 import avoshellImage from './images/avoshell.jpg'
 import odePortfolioImage from './images/odeportfolio.png'
+import avoEngine from './images/avoengine.png'
+import skunum from './images/skunum.png'
+import malh from './images/malh.png'
+import compiler from './images/compiler.png'
 
 export const projects = [
   {
@@ -22,9 +26,45 @@ export const projects = [
     language: 'Python | PostgreSQL',
     tags: 'fullstack, backend',
     link: "https://github.com/WillGaston/avoDB",
-    title: 'avoDB',
+    title: 'E2E Encrypted DBaaS',
     color: 'text-lime-700',
     description: 'End-to-end encrypted database-as-a-service and messanger - cli based with an emphasis on security'
+  },
+  {
+    src: avoEngine,
+    language: 'C++', 
+    tags: 'backend',
+    link: "https://github.com/WillGaston/avoEngine",
+    title: 'Relational Database Engine',
+    color: 'text-blue-700',
+    description: 'A toy relational database (inc. page/tuple/relation/buffer management, btree)'
+  },
+  {
+    src: malh,
+    language: 'C', 
+    tags: 'backend',
+    link: "",
+    title: 'Multi-Attribute Linear Hashing for Database',
+    color: 'text-blue-700',
+    description: 'MALH implementation for database file/tuple management'
+  },
+  {
+    src: skunum,
+    language: 'C | PostgreSQL', 
+    tags: 'backend',
+    link: "",
+    title: 'PostgreSQL Custom Data Type',
+    color: 'text-blue-700',
+    description: 'SKU Number custom data type added to PostgreSQL source code'
+  },
+  {
+    src: compiler,
+    language: 'Java', 
+    tags: 'backend',
+    link: "",
+    title: 'VC Compiler',
+    color: 'text-orange-400',
+    description: 'Compiler for VC (C subset) to Jasmin bytecode (lexical/syntactial/semantic analysis + bytecode)'
   },
   {
     src: odePortfolioImage,
@@ -142,32 +182,5 @@ export const projects = [
     color: 'text-blue-700',
     title: 'File Synchroniser',
     description: 'CLI program which acts as a simplified rsync: made during COMP1521 24T2 Ass2'
-  },
-  {
-    src: breakoutImage, 
-    language: 'Assembly',
-    tags: 'backend',
-    link: "",
-    color: 'text-red-500',
-    title: 'Breakout in MIPS',
-    description: 'Translated given C code into MIPS assembly: made during COMP1521 24T2 Ass1' 
-  },
-  {
-    src: salesAggregatorImage,
-    language: 'JavaScript',
-    tags: 'fullstack',
-    link: "https://github.com/WillGaston/SalesAggregator",
-    color: 'text-yellow-500',
-    title: 'SalesAggregator',
-    description: 'Web Scraper and React website for showing Sales and Limited Offers from online retailers.'
-  },
-  {
-    src: avoshellImage,
-    language: 'C',
-    tags: 'backend',
-    link: "https://github.com/WillGaston/AvoShell/blob/main/main.c",
-    color: 'text-blue-500',
-    title: 'AvoShell',
-    description: 'Shell made using arguments and posix_spawn'
-  },
+  }
 ];
